@@ -1,0 +1,99 @@
+{
+    "key": "group_6094123798566",
+    "title": "Menu options - second level",
+    "fields": [
+        {
+            "key": "field_609412e3ff70c",
+            "label": "Text",
+            "name": "text",
+            "type": "text",
+            "instructions": "This option works if parent menu item is Mega menu only",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_6094124ef857a",
+            "label": "Style",
+            "name": "style",
+            "type": "select",
+            "instructions": "This option works if parent menu item is Mega menu only",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "one-column": "One column",
+                "two-columns": "Two columns",
+                "resources": "Resources"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_6098fe7ca66d7",
+            "label": "Resource",
+            "name": "resource",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6094124ef857a",
+                        "operator": "==",
+                        "value": "resources"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "resources"
+            ],
+            "taxonomy": "",
+            "allow_null": 1,
+            "multiple": 0,
+            "return_format": "object",
+            "ui": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "menu_level",
+                "operator": "==",
+                "value": "1"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1629974729
+}

@@ -1,0 +1,26 @@
+// 1. Configuration and helpers
+@import 'abstracts/variables', 'abstracts/mixins';
+
+// 2. Vendors
+@import 'vendor/normalize', 'vendor/wp-core';
+
+// 3. Base stuff
+@import 'base/base', 'base/fonts', 'base/typography', 'base/helpers';
+
+// 4. Layout-related sections
+@import 'layout/header', 'layout/popup', 'layout/hero', 'layout/logos',
+    'layout/video-block', 'layout/chart', 'layout/features', 'layout/banner',
+    'layout/process', 'layout/legal', 'layout/image-text', 'layout/footer',
+    'layout/v2-hero', 'layout/v3-how-it-works', 'layout/v3-pricing',
+    'layout/v3-forecasting', 'layout/v3-vendors', 'layout/v3-reporting',
+    'layout/v3-profit', 'layout/people-hero', 'layout/people-meet-the-team',
+    'layout/people-profile-details', 'layout/join-shelf', 'layout/about-hero',
+    'layout/about-principles', 'layout/about-story', 'layout/blog',
+    'layout/single', 'layout/demo-form', 'layout/mailchimp', 'layout/press',
+    'layout/resources', 'layout/faq', 'layout/about-v2', 'layout/team',
+    'layout/landing-pages', 'layout/404', 'layout/labor-v1';
+
+// 5. Components
+@import 'components/button', 'components/dotted-circle', 'components/form',
+    'components/bg-circle', 'components/hamburger', 'components/cookie',
+    'components/quote-shortcode', 'components/callout-box';

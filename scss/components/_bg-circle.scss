@@ -1,0 +1,12 @@
+.bg-circle {
+  position: absolute;
+  border-radius: 50%;
+
+  &--white {
+    background-color: #fff;
+  }
+
+  &--dark {
+    background-color: $heading-color;
+  }
+}

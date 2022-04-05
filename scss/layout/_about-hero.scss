@@ -1,0 +1,56 @@
+.about-hero{
+
+  &__inner{
+    margin-top: 92px;
+    text-align: center;
+  }
+
+
+  &__text-wrap{
+    max-width: 665px;
+    margin: auto;
+
+    h4{
+      font-weight: 700;
+      margin-bottom: 8px;;
+
+      @include respond-to(md){
+        font-size: 24px;;
+      }
+    }
+
+    h1{
+      font-size: 48px;
+      line-height: 1.15;  
+      
+      @include respond-to(md){
+        font-size: 56px;;
+      }
+    }
+
+    p{
+      margin-top: 32px;
+    }
+  }
+
+  &__image-wrap{
+    height: 54vw;    
+    margin-left: -54px;
+    margin-right: -18px;
+    margin-top: -5vw;
+
+    @include respond-to(sm){
+      margin-left: -6%;
+      height: 402px;
+      margin-top: -50px;
+    }
+
+    img{
+
+
+      @include respond-to(sm){
+        margin: auto;
+      }
+    }
+  }
+}

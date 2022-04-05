@@ -1,0 +1,153 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+.page-footer {
+	background-color: #fff;
+	padding-top: 40px;
+	padding-bottom: 130px;
+
+	&__inner {
+		color: #07181f;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 26px;
+		max-width: $max-width;
+		margin: 0 auto;
+		padding: 0 20px;
+
+		h3 {
+			font-size: 1.6rem;
+			font-weight: 700;
+		}
+
+		a {
+			color: #59c5c7;
+			@include underline;
+		}
+	}
+
+	&__row {
+		display: flex;
+		flex-direction: row;
+		margin: 0 -20px;
+		flex-wrap: wrap;
+	}
+
+	&__col1-1 {
+		padding: 0 20px;
+		width: 100%;
+	}
+
+	&__col1-4 {
+		padding: 0 20px;
+		width: 25%;
+	}
+
+	&__logo {
+		margin-bottom: 40px;
+		width: 170px;
+		display: block;
+	}
+
+
+	&__menu {
+		li {
+			display: block;
+			padding-bottom: 8px;
+			&:before {
+				content: '';
+				background-image: url(../img/footer-menu-arrow.svg);
+				width: 8px;
+				height: 13px;
+				margin-right: 12px;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: contain;
+				display: inline-block;
+			}
+		}
+
+		a {
+			color: $heading-color;
+			font-size: 16px;
+			line-height: 19px;
+			font-weight: normal;
+			@include underline;
+		}
+	}
+
+	&__socials {
+		display: flex;
+		flex-direction: row;
+		padding-top: 40px;
+
+		li {
+			margin-right: 20px;
+		}
+
+		svg {
+			display: block;
+			height: 17px;
+			width: auto;
+			transition: all 0.25s ease;
+			&:hover {
+				opacity: 0.8;
+			}
+		}
+	}
+
+
+	&__copyright {
+		display: inline-flex;
+		align-items: center;
+		width: 100%;
+		color: $c-gray;
+		font-size: 12px;
+		font-weight: 400;
+		line-height: 1.5;
+		padding-top: 40px;
+
+		a {
+			color: inherit;
+		}
+	}
+
+	&__widget {
+		&-title {
+			font-size: 16px;
+			line-height: 19px;
+			font-weight: 600;
+			display: block;
+			padding-bottom: 29px;
+		}
+	}
+
+	@media (max-width: 768px) {
+		&__col1-4 {
+			width: 50%;
+			padding-bottom: 30px;
+		}
+	}
+
+	@media (max-width: 580px) {
+		padding-top: 20px;
+
+		&__col1-4 {
+			width: 100%;
+			padding-bottom: 20px;
+		}
+
+		&__logo {
+			margin-bottom: 20px;
+		}
+
+		&__copyright,
+		&__socials {
+			padding-top: 20px;
+		}
+
+		&__widget-title {
+			padding-bottom: 18px;
+		}
+	}
+}

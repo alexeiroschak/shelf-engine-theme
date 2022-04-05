@@ -1,0 +1,41 @@
+.people-hero{
+  margin-top: 71px;
+  position: relative;
+
+  &__image{
+
+    img{
+      object-fit: cover;
+      height: 272px;
+      object-position: 16%;
+
+      @include respond-to(sm){
+        height: 470px;
+      }
+      @include respond-to(lg){
+        height: 540px;
+      }
+
+      @include respond-to(xl){
+        height: 713px;
+      }
+    }
+  }
+
+  &__overlay{
+    display: flex;
+    position: absolute;
+
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+
+    &-section{
+      width: 20%;
+      height: 100%;
+      background-color: #66d4d6;
+      width: 100%;
+    }
+  }
+}

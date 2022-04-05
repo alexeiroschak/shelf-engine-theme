@@ -1,0 +1,192 @@
+.sh-mailchimp {
+    margin-bottom: 200px;
+    position: relative;
+
+    &--blog {
+        margin: 95px 0;
+    }
+
+    &__bg {
+        @include img-responsive();
+        position: absolute;
+        top: 50%;
+        right: 40px;
+        transform: translateY(-50%);
+    }
+
+    &__cover {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    &__wrapper {
+        background-color: $c-white;
+        background-size: auto 100%;
+        background-position: top right;
+        background-repeat: no-repeat;
+        box-shadow: 0 30px 60px rgba($heading-color, 0.5);
+        padding: 65px 60px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1;
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.25;
+    }
+
+    &__title,
+    &__text {
+        color: $heading-color;
+        margin-bottom: 25px;
+    }
+
+    &__info {
+        font-weight: 400;
+        font-size: 12px;
+        color: rgba($heading-color, 0.75);
+        line-height: 1.1;
+
+        a {
+            color: rgba($heading-color, 0.75);
+            text-decoration: underline;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+    &__form {
+        margin-bottom: 55px;
+
+        .mc4wp-form-fields {
+            display: flex;
+
+            input[type='submit'] {
+                background-color: $heading-color;
+                border: 0;
+                border-radius: 6px;
+                font-weight: 600;
+                font-size: 16px;
+                color: $c-white;
+                cursor: pointer;
+                padding: 12px 29px;
+                transition: background-color 0.3s ease-out;
+
+                &:hover {
+                    background-color: $c-brand-a;
+                    color: $heading-color;
+                }
+            }
+
+            .wpcf7-form-control-wrap:not(.email),
+            input[type='hidden'] {
+                display: none;
+            }
+        }
+
+        .mc4wp-response {
+            padding-top: 30px;
+        }
+        .wpcf7-response-output {
+            margin-top: 30px;
+        }
+
+        &-input {
+            margin-right: 20px;
+            position: relative;
+            width: 520px;
+
+            input[type='email'] {
+                border: 0;
+                border-bottom: 2px solid $brand-mid;
+                font-weight: 600;
+                font-size: 18px;
+                color: $heading-color;
+                outline: none;
+                height: 40px;
+                width: 100%;
+                &.error {
+                    border-bottom-color: $c-red;
+                }
+            }
+            #email-error {
+                font-size: 16px;
+                line-height: 1.25;
+                white-space: nowrap;
+                padding: 0;
+                left: 120px;
+                color: $c-red;
+                &::before {
+                    content: '- ';
+                }
+                @media screen and (max-width: 767px) {
+                    display: block;
+                    position: static;
+                    margin-top: 5px;
+                }
+            }
+
+            label {
+                font-weight: 700;
+                font-size: 16px;
+                color: $brand-mid;
+                line-height: 1.25;
+                position: absolute;
+                bottom: -25px;
+                left: 0;
+            }
+        }
+    }
+
+    @media screen and (max-width: 1199px) {
+        &__wrapper {
+            background-image: none !important;
+        }
+        &__cover {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: 991px) {
+        margin-bottom: 75px;
+
+        &__bg {
+            //display: none;
+        }
+    }
+
+    @media screen and (max-width: 580px) {
+        margin-bottom: 50px;
+
+        &__wrapper {
+            padding: 30px;
+            margin-bottom: 70px;
+        }
+
+        &__form {
+            margin-bottom: 25px;
+
+            .mc4wp-form-fields {
+                display: block;
+
+                input[type='submit'] {
+                    margin-top: 40px;
+                }
+            }
+
+            &-input {
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+/*
+Theme Name: Shelf Engine Theme
+Author: Lattimore and Friends
+Author URI: https://lattimoreandfriends.com/
+Description: Bespoke Wordpress theme for Shelf Engine
+Version: 1.0.0
+*/
+.callout-box > a {
+	color: #000;
+	text-decoration:underline
+}
+.callout-box > a:hover{ 
+	color: #153343;
+}

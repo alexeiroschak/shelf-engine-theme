@@ -1,0 +1,14 @@
+.dotted-circle,
+.dotted-circle-int {
+  position: absolute;
+
+  circle {
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+    stroke: $heading-color;
+    stroke-width: 0.4;
+    stroke-dasharray: 0.2, 2;
+    stroke-linecap: round;
+  }
+}

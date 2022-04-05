@@ -1,0 +1,437 @@
+.sh-demo-overlay {
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba($c-brand-a, 0.75);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+
+    &.active-overlay {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.sh-demo {
+    background-color: $heading-color;
+    padding: 75px 40px;
+    transform: translateX(750px);
+    transition: transform 0.5s ease-out;
+    overflow-y: scroll;
+    width: 750px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    @media screen and (min-width: 1440px) {
+        &.sh-demo_landing {
+            width: 600px;
+            transform: translateX(600px);
+        }
+    }
+
+    @media screen and (max-width: 1439px) {
+        width: 500px;
+        transform: translateX(500px);
+    }
+
+    @media screen and (max-width: 580px) {
+        width: 100%;
+        transform: translateX(100%);
+    }
+
+    &_all-pages {
+        box-shadow: -20px 0 40px rgba($heading-color, 0.25);
+    }
+
+    &--active {
+        transform: translateX(0) !important;
+    }
+
+    &__close {
+        cursor: pointer;
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        width: 30px;
+        height: 30px;
+        opacity: 1;
+        transition: all 0.25s ease;
+
+        &::before,
+        &::after {
+            content: '';
+            display: inline-block;
+            background-color: $brand-mid;
+            width: 30px;
+            height: 2px;
+            position: absolute;
+            top: 14px;
+            left: 0;
+        }
+
+        &::before {
+            transform: rotate(-45deg);
+        }
+
+        &::after {
+            transform: rotate(45deg);
+        }
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 48px;
+        color: $c-white;
+        line-height: 1.25;
+        margin-bottom: 45px;
+    }
+
+    &__subheading {
+        margin-bottom: 45px;
+    }
+
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+
+    &__col {
+        padding-left: 10px;
+        padding-right: 10px;
+        width: 50%;
+
+        &--large {
+            width: 100%;
+        }
+    }
+
+    input:not([type='submit']),
+    textarea {
+        background-color: transparent;
+        border: 0;
+        border-radius: 0;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 1.25;
+        color: $c-white;
+        outline: none;
+        width: 100%;
+        transition: all 0.3s ease-out;
+
+        &:-webkit-autofill,
+        &:-internal-autofill-selected {
+            color: $c-white !important;
+            background-color: transparent !important;
+            background-image: none !important;
+            -webkit-text-fill-color: $c-white !important;
+            -webkit-text-background-color: $c-white !important;
+            -webkit-box-shadow: 0 0 0 30px $heading-color inset !important;
+        }
+
+        &::placeholder {
+            font-weight: 400;
+            font-size: 16px;
+            color: transparent;
+            line-height: 1.25;
+        }
+
+        &::-webkit-input-placeholder {
+            font-weight: 400;
+            font-size: 16px;
+            color: transparent;
+            line-height: 1.25;
+        }
+
+        &:-ms-input-placeholder {
+            font-weight: 400;
+            font-size: 16px;
+            color: transparent;
+            line-height: 1.25;
+        }
+
+        &::-ms-input-placeholder {
+            font-weight: 400;
+            font-size: 16px;
+            color: transparent;
+            line-height: 1.25;
+        }
+
+        &:focus {
+            border-bottom-color: $brand-mid;
+
+            &::placeholder {
+                color: rgba($brand-mid, 0.4);
+            }
+
+            &::-webkit-input-placeholder {
+                color: rgba($brand-mid, 0.4);
+            }
+
+            &:-ms-input-placeholder {
+                color: rgba($brand-mid, 0.4);
+            }
+
+            &::-ms-input-placeholder {
+                color: rgba($brand-mid, 0.4);
+            }
+        }
+        &.wpcf7-not-valid,
+        &.error {
+            border-bottom-color: $c-red !important;
+            @media screen and (max-width: 1439px) {
+                margin-bottom: 5px;
+            }
+        }
+    }
+
+    textarea {
+        &::placeholder {
+            color: rgba($brand-mid, 0.4);
+        }
+        &:-ms-input-placeholder {
+            color: rgba($brand-mid, 0.4);
+        }
+
+        &::-ms-input-placeholder {
+            color: rgba($brand-mid, 0.4);
+        }
+        &::-webkit-input-placeholder {
+            color: rgba($brand-mid, 0.4);
+        }
+    }
+
+    input:not([type='submit']) {
+        border-bottom: 2px solid rgba($brand-mid, 0.4);
+        font-family: $text-font-stack;
+    }
+
+    textarea {
+        border-left: 2px solid rgba($brand-mid, 0.4);
+        font-size: 16px;
+        resize: none;
+        padding-left: 20px;
+        height: 120px;
+        font-family: $text-font-stack;
+
+        &:focus {
+            border-left-color: $brand-mid;
+        }
+
+        &.wpcf7-not-valid {
+            border-left-color: $c-red;
+        }
+    }
+
+    input[type='submit'] {
+        background-color: rgba($brand-mid, 0.4);
+        border-radius: 6px;
+        border: 0;
+        font-family: $text-font-stack;
+        font-weight: 600;
+        font-size: 16px;
+        color: $heading-color;
+        cursor: pointer;
+        line-height: 1.25;
+        padding: 11px 32px;
+        margin-bottom: 30px;
+        transition: all 0.3s ease-out;
+
+        &:hover {
+            background-color: $brand-mid;
+        }
+    }
+
+    label {
+        display: block;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.25;
+        color: rgba($brand-mid, 0.4);
+        margin-bottom: 30px;
+        transition: all 0.3s ease-out;
+
+        &.valid,
+        &:focus-within {
+            color: $brand-mid;
+        }
+    }
+    .form-control {
+        position: relative;
+        display: block;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.25;
+        color: rgba($brand-mid, 0.4);
+        margin-bottom: 30px;
+        transition: all 0.3s ease-out;
+
+        &.valid,
+        &:focus-within {
+            color: $brand-mid;
+        }
+        &.active {
+            color: $c-brand-a;
+            input:not([type='submit']) {
+                border-bottom-color: $c-brand-a;
+            }
+            textarea {
+                border-left-color: $c-brand-a;
+            }
+        }
+        .wpcf7-not-valid-tip,
+        label.error {
+            position: absolute;
+            margin: 0;
+            bottom: 0px;
+            color: $c-red;
+            font-size: 16px;
+            line-height: 1.25;
+            white-space: nowrap;
+            &::before {
+                content: '- ';
+                color: $c-red;
+            }
+            @media screen and (max-width: 1439px) {
+                position: static;
+                padding-left: 0;
+            }
+        }
+        #first_name-error,
+        #last_name-error,
+        .first_name .wpcf7-not-valid-tip,
+        .last_name .wpcf7-not-valid-tip {
+            position: static;
+            margin-top: 5px;
+            padding-left: 0;
+        }
+        #email-error,
+        #company-error,
+        .email .wpcf7-not-valid-tip,
+        .company .wpcf7-not-valid-tip {
+            left: 140px;
+        }
+        #email-error:not(:last-child) {
+            display: none !important;
+        }
+        #phone-error,
+        .phone .wpcf7-not-valid-tip {
+            left: 70px;
+        }
+    }
+    .select2-container {
+        margin: 10px 0 60px;
+        width: 100% !important;
+
+        .select2-selection {
+            &--single {
+                background-color: transparent;
+                border: 0;
+                height: auto;
+            }
+
+            &__rendered {
+                background-color: rgba($brand-mid, 0.1);
+                border-radius: 6px;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 1.25;
+                padding: 11px 20px;
+                &[title='Select your industry...'] {
+                    color: rgba($brand-mid, 0.4);
+                }
+                &:not([title='Select your industry...']) {
+                    color: $c-white;
+                }
+            }
+
+            &__arrow {
+                top: 7px;
+                right: 15px;
+
+                &::after {
+                    content: '';
+                    display: inline-block;
+                    background-image: url('../img/select2-arrow.svg');
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    opacity: 0.4;
+                    width: 18px;
+                    height: 9px;
+                    transition: all 0.3s;
+                }
+
+                b {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .select2-container--default.select2-container--open
+        .select2-selection--single
+        .select2-selection__arrow {
+        &:after {
+            transform: rotate(180deg);
+        }
+    }
+
+    p {
+        font-weight: 400;
+        font-size: 14px;
+        color: rgba($c-white, 0.4);
+        &.sh-demo__subheading {
+            font-size: 18px;
+            color: $c-white;
+        }
+    }
+
+    .wpcf7-form-control-wrap {
+        display: block;
+        margin-bottom: 10px;
+        #industry-error {
+            position: absolute;
+            left: 0;
+            bottom: 30px;
+        }
+        #industry-error:not(:empty) + .select2-container {
+            border: 1px solid $c-red;
+            box-sizing: border-box;
+            border-radius: 6px;
+        }
+    }
+
+    .wpcf7-response-output {
+        color: $c-white;
+        font-size: 14px;
+        margin-top: 10px;
+        padding: 10px;
+        border: 1px solid $c-white;
+
+        &:empty {
+            display: none;
+        }
+    }
+    button:disabled {
+        background-color: rgba($brand-mid, 0.4);
+    }
+    p a {
+        color: $c-brand-a;
+        text-decoration: underline;
+        &:hover {
+            color: $brand-light;
+        }
+    }
+}

@@ -1,0 +1,211 @@
+.people-meet-the-team{
+
+  &__inner{
+    margin-top: 124px;
+    margin-bottom: 55px;
+
+    @include respond-to(sm){
+      text-align: center;
+    }  
+    
+    @include respond-to(xl){
+      margin-top: 140px;
+      margin-bottom: 117px;
+    }    
+  }
+
+
+
+  &__text-wrap{
+    h1{
+      margin-bottom: 20px;
+      font-size: 56px;;
+    }
+
+    p{
+      margin-bottom: 40px;
+      font-size: 24px;
+    }
+
+    @include respond-to(xl){
+      margin-bottom: 96px;
+
+    }
+  }
+
+  &__name-and-title{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 0%;
+    padding-right: 11%;
+
+    @include respond-to(sm){
+      padding-left: 0%;
+      padding-right: 6%;
+
+    }
+
+    P{
+      max-width: 80%;
+      opacity: 0;
+      color: white;
+      transition: 0.7s;
+      font-size: 10px;
+      line-height: 1.1;
+      padding-bottom: 5px;
+      margin-top: 20px;
+
+      @media (min-width: 350px){
+        font-size: 12px;
+      }
+
+      @media (min-width: 520px){
+        font-size: 15px;
+      }
+
+      @include respond-to(sm){
+        font-size: 15px;
+      }
+    }
+
+    p:last-child{
+      font-size: 16px;
+      font-weight: 700;
+      margin-top: 20px;
+
+      @media (min-width: 350px){
+        font-size: 18px;
+      }
+
+      @media (min-width: 520px){
+        font-size: 30px;
+      }
+
+      @include respond-to(sm){
+        font-size: 30px;
+      }
+
+
+    }
+
+
+  }
+
+  &__hidden{
+    height: 0px;
+    overflow: hidden;
+    width: 0px;
+  }
+
+  &__profiles-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -10px;
+    margin-right: -10px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    
+
+    @include respond-to(sm){
+      margin-left: -17px;
+      margin-right: -20px;
+    }
+  }
+
+  &__image-container{
+    background-size: cover;
+    position: relative;
+    border-radius: 50%;
+    transition: 0.7s;
+    height: 100%;
+    transition: 0.7s;
+  }
+
+  &__image-container-overlay{
+    position: absolute;
+    background-color: #0000008c;
+    height: 100%;
+    width: 100%;
+    opacity: 0;   
+    border-radius: 50%; 
+    transition: all 0.7s;
+  }
+
+
+  &__profile-container{
+    width: 50%;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all 0.7s;    
+    position: relative;
+    text-align: center;
+    padding: 10px;
+    
+
+    &:before {
+      content:'';
+      float:left;
+      padding-top:100%;
+    }
+
+    @media (min-width: 850px){
+      width: 33.33333%
+    }  
+
+    @include respond-to(lg){
+      width: 25%;
+    }
+
+    img{
+      display: none;
+    }
+
+
+
+ 
+
+    @include on-event{
+
+      .people-meet-the-team__image-container{
+        transform: scale(0.9);
+      }
+
+      .people-meet-the-team__image-container-overlay{
+        opacity: 1;
+      }
+
+      .people-meet-the-team__name-and-title{
+        p{
+          opacity: 1;
+          margin-top: 0px;
+        }
+      }
+      cursor: pointer;
+    }
+    &.active{
+
+      .people-meet-the-team__image-container{
+        transform: scale(0.9);
+      }
+
+      .people-meet-the-team__image-container-overlay{
+        opacity: 1;
+      }
+
+      .people-meet-the-team__name-and-title{
+        p{
+          opacity: 1;
+          margin-top: 0px;
+        }
+      }
+    }
+  }
+}
+
+

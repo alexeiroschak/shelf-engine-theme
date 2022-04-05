@@ -1,0 +1,122 @@
+.v3-reporting{
+  position: relative;
+  height: 638px;
+  position: relative;
+  overflow: hidden;
+
+  @media (min-width: 458px){
+    height: 774px;
+  }
+
+  @include respond-to(md){
+    height: 774px;
+  }
+
+  @include respond-to(xl){
+    height: 902px !important;
+  }
+
+
+
+  @include respond-to(md){
+    height: 774px;
+  }
+
+  &__inner{
+    padding-top: 75px;
+    padding-bottom: 6rem;
+    position: relative;
+
+    @include respond-to(md){
+      display: flex;
+    }
+
+    @include respond-to(lg){
+      padding-top: 139px;
+    }
+  }
+
+  &__text-wrap{
+    @include respond-to(md){
+      width: 50%;
+      padding-right: 60px;
+
+      p:not(:first-child) {
+        padding-left: 56px;
+      }
+    }
+  }
+
+  &__image-wrap{
+    position: absolute;
+    right: 0;
+    top: 309px;
+
+    @include respond-to(md){
+      top: 81px;
+    }
+
+    @include respond-to(lg){
+      top: 81px;
+    }
+
+    img{
+      transform: translate(100%, 0px);
+      transform-origin: bottom;
+      max-width: 100%;
+
+      @include respond-to(sm){
+        top: 0;
+        max-width: 543px;
+      }
+
+
+
+
+      @include respond-to(md){
+        top: 0;
+        max-width: 910px;
+      }
+
+      @include respond-to(xl){
+        max-width: 1300px !important;
+      }
+    }
+  }
+}
+
+
+
+
+.v3-reporting{
+  
+  &__circle-white{
+
+
+    background-color: #fff;
+    position: absolute;
+    top: 283px;
+    right: -190px;
+    width: 384px;
+    height: 378px;
+    border-radius: 50%;
+    opacity: 0;
+    transform: scale(0.5);
+
+    @include respond-to(md){
+      background-color: #fff;
+      position: absolute;
+      top: -211px;
+      right: -724px;
+      width: 1200px;
+      height: 1200px;
+      border-radius: 50%;
+      transform: scale(0.5);
+
+    }
+
+    
+
+    }
+  }
+

@@ -1,0 +1,160 @@
+.v3-how-it-works{
+   background-color: #EBF6F4;
+
+  &__inner{
+    padding-top: 52px;
+    padding-bottom: 4rem;
+
+    @include respond-to(xl){
+    }
+
+    h2{
+      font-size: 29px;
+      margin-bottom: 74px;
+      
+      @include respond-to(lg){
+        font-size: 42px;
+        margin-bottom: 9rem;
+      }    
+      
+      @include respond-to(lg){
+        margin-bottom: 140px;
+      } 
+    }
+
+    @include respond-to(sm){
+      display: flex;
+      padding-top: 103px;
+      padding-bottom: 8rem;
+    }
+  }
+
+  &__text-wrap{
+    @include respond-to(sm){
+      width: 50%;
+      padding-right: 60px;
+    }
+    @include respond-to(sm){
+      p:last-child{
+        padding-left: 60px;;
+      }
+    }
+  }
+
+  &__guaranteed{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    font-size: 24px;
+    font-weight: 700;
+    color: #0F2D3B;
+
+    img{
+      margin-right: 15px;
+    }
+  }
+}
+
+.v3-how-it-works__speech-bubbles-wrap{
+  position: relative;
+  height: 340px;
+  width: 320px;
+  margin: auto;
+  margin-top: 30px;
+
+  @include respond-to(lg){
+    width: 411px;
+    margin-top: 65px;
+  }
+
+  @include respond-to(lg){
+    width: 411px;
+    margin-top: 105px;
+  }
+
+
+  img{
+    opacity: 0;
+    transform: scale(1);
+  }
+
+  .how-it-works-1{
+    position: absolute;
+    top: 220px;
+    left: -54px;
+    opacity: 0; 
+    transform: scale(0.4);
+    animation: pulseBubble 2s infinite;
+    animation-delay: 0s;
+  }
+
+  .how-it-works-2{
+    position: absolute;
+    top: 67px;
+    right: -21px;
+    opacity: 0; 
+    transform: scale(0.4);
+    animation: pulseBubble 2s infinite;
+    animation-delay: 0.7s;
+  }
+
+  .how-it-works-3{
+    position: absolute;
+    top: 81px;
+    left: -22px;
+    opacity: 0; 
+    transform: scale(0.4);
+    animation: pulseBubble 2s infinite;
+    animation-delay: 0.355s;
+  }
+
+  .how-it-works-4{
+    position: absolute;
+    top: 142px;
+    left: -40px;
+    opacity: 0; 
+    transform: scale(0.4);
+    animation: pulseBubble 2s infinite;
+    animation-delay: 0.9s;
+
+    @include respond-to(lg){
+      left: 66px
+    }
+  }
+
+  .how-it-works-5{
+    position: absolute;
+    top: 2px;
+    left: 20px;
+    opacity: 0; 
+    transform: scale(0.4);
+    animation: pulseBubble 2s infinite;
+    animation-delay: 1.2s;
+  }
+
+  .how-it-works-6{
+    position: absolute;
+    top: 160px;
+    right: -58px;
+    opacity: 0; 
+    transform: scale(0.4);
+    animation: pulseBubble 2s infinite;
+    animation-delay: 1.5s;
+  }
+
+  .how-it-works-7{
+    position: absolute;
+    top: 256px;
+    right: 1px;
+    opacity: 0; 
+    transform: scale(0.4);
+    animation: pulseBubble 2s infinite;
+    animation-delay: 1.2s;
+  }
+}
+
+@keyframes pulseBubble {
+  0% {opacity: 0; transform: scale(0)}
+  70% {opacity: 1; transform: scale(0.6)}
+  100% {opacity: 0; transform: scale(0.6)}
+}

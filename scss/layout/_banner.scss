@@ -1,0 +1,108 @@
+.banner {
+    background-color: #e2f4f4;
+
+    &__inner {
+        padding-top: 65px;
+        padding-bottom: 30px;
+
+        @include respond-to(md) {
+            position: relative;
+            padding-top: 120px;
+            padding-bottom: 100px;
+            min-height: 550px;
+        }
+    }
+
+    &__copy-wrap {
+        margin-bottom: 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        h2 {
+            margin-bottom: 25px;
+            max-width: 575px;
+        }
+
+        p {
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+        }
+
+        .btn {
+            padding-top: 16px;
+            padding-bottom: 16px;
+            // width: 100%;
+            // max-width: 428px;
+        }
+
+        @include respond-to(sm) {
+            .btn {
+                width: auto;
+            }
+        }
+
+        @include respond-to(md) {
+            margin-bottom: 0;
+            width: 50%;
+        }
+    }
+
+    &__img-wrap {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img {
+            position: relative;
+            z-index: 2;
+            margin-right: 15%;
+            width: 450px;
+            max-width: none;
+        }
+
+        @include respond-to(sm) {
+            img {
+                margin-right: 0;
+                width: 600px;
+                transform: none;
+            }
+        }
+
+        @include respond-to(md) {
+            position: absolute;
+            top: 50%;
+            left: 40%;
+            transform: translateY(-40%);
+        }
+
+        @include respond-to(lg) {
+            left: 50%;
+        }
+    }
+
+    .dotted-circle,
+    .dotted-circle-int {
+        position: absolute;
+        top: -40px;
+        right: 0;
+        width: 230px;
+        height: 230px;
+
+        svg circle {
+            stroke-width: 0.53;
+            stroke-dasharray: 0.25, 3.8;
+        }
+
+        @media (min-width: 468px) {
+            right: 20%;
+        }
+
+        @include respond-to(sm) {
+            top: 0;
+            right: 20%;
+        }
+    }
+}

@@ -1,0 +1,91 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+/// Regular font family
+/// @type List
+$text-font-stack: 'usual', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica',
+    'Arial', sans-serif !default;
+
+/// Alt font family
+/// @type List
+$alt-font-stack: 'IBM Plex Sans', 'Helvetica Neue Light', 'Helvetica Neue',
+    'Helvetica', 'Arial', sans-serif !default;
+
+$c-white: #fff;
+$c-black: #000;
+$c-dark: #333;
+$c-gray: #8a99a1;
+$c-brand: #59c5c7;
+$c-brand-a: #66d4d6;
+$c-brand-b: #e7f5f2;
+$c-red: #ff4c4c;
+
+/// Copy text color
+/// @type Color
+$text-color: #01161e !default;
+
+/// Heading color
+/// @type Color
+$heading-color: #153343 !default;
+
+/// Heading color 2
+/// @type Color
+$heading-color-2: #0f2d3b !default;
+
+/// Main brand color
+/// @type Color
+$brand-light: #ebf6f4 !default;
+
+/// Main brand color
+/// @type Color
+$brand-mid: #66d4d6 !default;
+
+/// Main brand color
+/// @type Color
+$brand-dark: #34bdbf !default;
+
+/// Light grey
+/// @type Color
+$light-grey: #f4f4f4 !default;
+
+/// Medium grey
+/// @type Color
+$mid-grey: rgb(153, 153, 153) !default;
+
+/// Dark grey
+/// @type Color
+$dark-grey: rgb(68, 68, 68) !default;
+
+/// Container's maximum width
+/// @type Length
+$max-width: 1170px !default;
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$breakpoints: (
+    'sm': only screen and
+        (
+            min-width: 768px
+        ),
+    'md': only screen and
+        (
+            min-width: 1024px
+        ),
+    'lg': only screen and
+        (
+            min-width: 1280px
+        ),
+    'xl': only screen and
+        (
+            min-width: 1440px
+        ),
+    'xxl': only screen and
+        (
+            min-width: 1920px
+        ),
+    'landscape': (
+        orientation: landscape
+    )
+) !default;

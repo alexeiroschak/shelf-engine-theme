@@ -1,0 +1,91 @@
+.join-shelf{
+  background-color: #EBF6F4;
+  overflow: hidden;
+  position: relative;
+
+
+  &__inner{
+    padding-top: 55px;
+    padding-bottom: 55px;
+
+    @include respond-to(sm){
+      display: flex;
+      height: 500px;
+    }
+
+    @include respond-to(xl){
+      display: flex;
+      height: 500px;
+    }
+
+  }
+
+  &__text-wrap{
+
+    @include respond-to(sm){
+      width: 50%;
+      align-self: center;
+    }
+
+    h1{
+      font-size: 42px;
+      
+    }
+
+    p{
+      margin-top: 32px;
+
+    }
+
+    button{
+      margin-top: 26px;
+      width: 222px;
+      margin-bottom: 65px;
+
+      @include on-event{
+        opacity: 0.8 !important;
+      }
+    }
+  }
+
+  &__bg-wrap{
+    height: 90vw;   
+    margin-left: -20px;
+    margin-right: -20px;
+
+    img{
+      
+      object-fit: cover;
+      object-position: left;
+      position: absolute;
+      right: 0;
+
+      @include respond-to(sm){
+        height: 100%;
+      }
+
+    }
+
+    @media (min-width: 550px){
+      height: 75vw;
+    }
+    @include respond-to(sm){
+      width: 50%;
+      height: 500px;
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      img{
+
+      }
+    }
+    @include respond-to(lg){
+      width: 45%;
+      img{
+
+      }
+    }
+
+  }
+}

@@ -1,0 +1,745 @@
+.sh-team {
+    padding-top: 60px;
+    background-color: $c-white;
+
+    @media (min-width: 992px) {
+        padding-top: 72px;
+    }
+
+    &__banner {
+        $b: &;
+
+        background-color: $brand-light;
+        padding-top: 70px;
+        position: relative;
+
+        @media (min-width: 768px) {
+            padding-top: 120px;
+        }
+
+        &-decor {
+            position: absolute;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain;
+
+            &_1 {
+                width: 354px;
+                height: 374px;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                background-image: url(../img/peas-2.png);
+            }
+            &_2 {
+                width: 78px;
+                height: 87px;
+                left: 40px;
+                top: 50%;
+                transform: translateY(calc(-100% - 200px));
+                background-image: url(../img/peas-3.png);
+            }
+            &_3 {
+                width: 232px;
+                height: 223px;
+                right: 0;
+                bottom: 200px;
+                background-image: url(../img/peas-1.png);
+            }
+        }
+
+        .container {
+            position: relative;
+            z-index: 9;
+        }
+
+        &-title {
+            text-align: center;
+            margin-bottom: 10px;
+            color: $heading-color;
+
+            @media (min-width: 1200px) {
+                font-size: 56px;
+            }
+            @media (max-width: 575px) {
+                font-size: 36px;
+            }
+        }
+
+        &-subtitle {
+            text-align: center;
+            font-size: 18px;
+            line-height: 28px;
+            margin-bottom: 50px;
+            color: $heading-color;
+        }
+
+        &-line-top,
+        &-line-bottom {
+            width: 100%;
+            padding-left: 20px;
+            padding-right: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            z-index: 9;
+
+            @media (min-width: 768px) {
+                padding-left: 40px;
+                padding-right: 40px;
+            }
+
+            @media (min-width: 1200px) {
+                max-width: 1000px;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            @media (min-width: 1400px) {
+                max-width: 1300px;
+            }
+            @media (min-width: 1577px) {
+                max-width: 1533px;
+            }
+        }
+
+        &-line-top {
+            #{$b}-row {
+                @media (min-width: 1200px) {
+                    justify-content: flex-end;
+                }
+            }
+
+            #{$b}-col {
+                &:first-child {
+                    #{$b}-img {
+                        @media (min-width: 1200px) {
+                            width: 430px;
+                        }
+
+                        @media (min-width: 1400px) {
+                            width: 580px;
+                        }
+
+                        @media (min-width: 1577px) {
+                            width: 705px;
+                        }
+                    }
+                }
+
+                @media (min-width: 768px) and (max-width: 1199px) {
+                    flex-basis: 0;
+                    flex-grow: 1;
+                    max-width: 100%;
+
+                    &:first-child {
+                        flex: 0 0 60%;
+                        max-width: 60%;
+                    }
+                }
+            }
+        }
+
+        &-line-bottom {
+            #{$b}-col {
+                &:last-child {
+                    #{$b}-img {
+                        @media (min-width: 1200px) {
+                            width: 430px;
+                        }
+
+                        @media (min-width: 1400px) {
+                            width: 580px;
+                        }
+
+                        @media (min-width: 1577px) {
+                            width: 705px;
+                        }
+                    }
+                }
+
+                @media (min-width: 768px) and (max-width: 1199px) {
+                    flex-basis: 0;
+                    flex-grow: 1;
+                    max-width: 100%;
+
+                    &:last-child {
+                        flex: 0 0 60%;
+                        max-width: 60%;
+                    }
+                }
+            }
+        }
+
+        &-row {
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: -10px;
+            margin-right: -10px;
+
+            @media (min-width: 768px) {
+                margin-left: -20px;
+                margin-right: -20px;
+            }
+        }
+
+        &-col {
+            padding: 10px;
+            flex: 0 0 100%;
+            max-width: 100%;
+
+            @media (min-width: 576px) {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+
+            @media (min-width: 768px) {
+                padding: 20px;
+            }
+
+            @media (min-width: 1200px) {
+                flex: 0 0 auto;
+                width: auto;
+                max-width: 100%;
+            }
+
+            /*&:first-child {
+                #{$b}-img {
+
+                    @media (min-width: 1200px) {
+                        width: 430px;
+                    }
+
+                    @media (min-width: 1400px) {
+                        width: 580px;
+                    }
+
+                    @media (min-width: 1577px) {
+                        width: 705px;
+                    }
+                }
+            }*/
+        }
+
+        &-img {
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            box-shadow: 0 30px 60px rgba($heading-color, 0.5);
+            width: 100%;
+            height: 260px;
+
+            @media (min-width: 1200px) {
+                width: 350px;
+                height: 260px;
+            }
+            @media (min-width: 1400px) {
+                width: 450px;
+                height: 360px;
+            }
+            @media (min-width: 1577px) {
+                width: 540px;
+                height: 436px;
+            }
+        }
+    }
+
+    &__leadership {
+        $l: &;
+
+        background-color: $brand-light;
+        padding-top: 70px;
+        padding-bottom: 60px;
+        position: relative;
+
+        @media (min-width: 768px) {
+            padding-top: 100px;
+            padding-bottom: 120px;
+        }
+
+        &-decor {
+            position: absolute;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain;
+            width: 354px;
+            height: 374px;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background-image: url(../img/peas-2.png);
+        }
+
+        &-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: $heading-color;
+            text-align: center;
+
+            @media (min-width: 768px) {
+                font-size: 36px;
+            }
+        }
+
+        &-container {
+            max-width: 1156px;
+            padding-left: 40px;
+            padding-right: 40px;
+            margin-left: auto;
+            margin-right: auto;
+
+            @media (min-width: 576px) {
+                max-width: 540px;
+            }
+            @media (min-width: 768px) {
+                max-width: 750px;
+            }
+            @media (min-width: 992px) {
+                max-width: 970px;
+            }
+            @media (min-width: 1230px) {
+                max-width: 1156px;
+            }
+        }
+
+        &-row {
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: -20px;
+            margin-right: -20px;
+            justify-content: center;
+        }
+
+        &-col {
+            padding: 40px 20px;
+            flex: 0 0 50%;
+            max-width: 50%;
+
+            @media (min-width: 992px) {
+                flex: 0 0 25%;
+                max-width: 25%;
+            }
+        }
+
+        &-item {
+            cursor: pointer;
+            text-align: center;
+            color: $heading-color;
+
+            &:hover {
+                #{$l}-thumb {
+                    transform: scale(1.05);
+                }
+
+                #{$l}-name,
+                #{$l}-job-title {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        &-thumb {
+            margin-bottom: 25px;
+            transition: all 0.3s;
+        }
+
+        &-name {
+            font-size: 20px;
+            line-height: 1.2;
+            font-weight: 600;
+            margin-bottom: 7px;
+        }
+
+        &-job-title {
+            font-size: 18px;
+        }
+    }
+
+    .sh-join {
+        background-color: $c-white;
+    }
+}
+
+.sh-team-modal {
+    max-width: 1157px;
+    position: relative;
+
+    &__close {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        width: 18px;
+        height: 18px;
+        padding: 0;
+        border: none;
+        background-color: transparent;
+
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            background-color: $c-brand-a;
+            width: 1px;
+            height: calc(100% + 3px);
+            transition: all 0.3s;
+        }
+
+        &:before {
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+        &:after {
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+
+        &:hover {
+            &:before,
+            &:after {
+                height: calc(100% + 6px);
+                background-color: $heading-color;
+            }
+        }
+    }
+
+    &__bio {
+        background-color: $c-white;
+        text-align: left;
+        padding: 40px 20px;
+        display: flex;
+        flex-wrap: wrap;
+        border-radius: 6px;
+
+        @media (min-width: 768px) {
+            padding: 90px 40px 85px;
+        }
+    }
+
+    &__thumb {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 30px;
+
+        @media (min-width: 768px) {
+            flex: 0 0 332px;
+            max-width: 332px;
+            margin-bottom: 0;
+        }
+
+        img {
+            width: 100%;
+            max-width: 332px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    &__social {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 27px;
+
+        a {
+            display: block;
+            width: 21px;
+            height: 21px;
+            margin-left: 8px;
+            margin-right: 8px;
+            transition: all 0.3s;
+            position: relative;
+
+            svg {
+                path {
+                    fill: $heading-color;
+                    transition: all 0.3s;
+                }
+            }
+
+            &:hover {
+                svg {
+                    path {
+                        fill: $c-brand-a;
+                    }
+                }
+            }
+        }
+    }
+
+    &__content {
+        flex: 0 0 100%;
+        max-width: 100%;
+        color: $heading-color;
+
+        @media (min-width: 768px) {
+            flex-basis: 0;
+            flex-grow: 1;
+            max-width: 100%;
+            padding-left: 40px;
+        }
+    }
+
+    &__name {
+        font-size: 24px;
+        line-height: 1.1;
+        font-weight: bold;
+        margin-bottom: 20px;
+
+        @media (min-width: 768px) {
+            font-size: 36px;
+        }
+    }
+
+    &__job-title {
+        font-size: 18px;
+        line-height: 1.1;
+        color: $c-gray;
+        margin-bottom: 20px;
+    }
+
+    &__description {
+        font-size: 18px;
+        line-height: 1.6;
+    }
+}
+
+/*
+ *  Remodal - v1.1.1
+ *  Responsive, lightweight, fast, synchronized with CSS animations, fully customizable modal window plugin with declarative configuration and hash tracking.
+ *  http://vodkabears.github.io/remodal/
+ *
+ *  Made by Ilya Makarov
+ *  Under MIT License
+ */
+
+/* ==========================================================================
+   Remodal's necessary styles
+   ========================================================================== */
+
+/* Hide scroll bar */
+
+html.remodal-is-locked {
+    overflow: hidden;
+
+    -ms-touch-action: none;
+    touch-action: none;
+}
+
+/* Anti FOUC */
+
+.remodal,
+[data-remodal-id] {
+    display: none;
+}
+
+/* Necessary styles of the overlay */
+
+.remodal-overlay {
+    position: fixed;
+    z-index: 9999;
+    top: -5000px;
+    right: -5000px;
+    bottom: -5000px;
+    left: -5000px;
+
+    display: none;
+}
+
+/* Necessary styles of the wrapper */
+
+.remodal-wrapper {
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: none;
+    overflow: auto;
+
+    text-align: center;
+
+    -webkit-overflow-scrolling: touch;
+}
+
+.remodal-wrapper:after {
+    display: inline-block;
+
+    height: 100%;
+    margin-left: -0.05em;
+
+    content: '';
+}
+
+/* Fix iPad, iPhone glitches */
+
+.remodal-overlay,
+.remodal-wrapper {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+/* Necessary styles of the modal dialog */
+
+.remodal {
+    position: relative;
+
+    outline: none;
+
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+.remodal-is-initialized {
+    /* Disable Anti-FOUC */
+    display: inline-block;
+}
+
+/*
+ *  Remodal - v1.1.1
+ *  Responsive, lightweight, fast, synchronized with CSS animations, fully customizable modal window plugin with declarative configuration and hash tracking.
+ *  http://vodkabears.github.io/remodal/
+ *
+ *  Made by Ilya Makarov
+ *  Under MIT License
+ */
+
+/* ==========================================================================
+   Remodal's default mobile first theme
+   ========================================================================== */
+
+/* Default theme styles for the background */
+
+.remodal-bg.remodal-is-opening,
+.remodal-bg.remodal-is-opened {
+    -webkit-filter: blur(3px);
+    filter: blur(3px);
+}
+
+/* Default theme styles of the overlay */
+
+.remodal-overlay {
+    background: rgba($heading-color, 0.8);
+}
+
+.remodal-overlay.remodal-is-opening,
+.remodal-overlay.remodal-is-closing {
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+.remodal-overlay.remodal-is-opening {
+    -webkit-animation-name: remodal-overlay-opening-keyframes;
+    animation-name: remodal-overlay-opening-keyframes;
+}
+
+.remodal-overlay.remodal-is-closing {
+    -webkit-animation-name: remodal-overlay-closing-keyframes;
+    animation-name: remodal-overlay-closing-keyframes;
+}
+
+/* Default theme styles of the wrapper */
+
+.remodal-wrapper {
+    padding: 10px 20px 0;
+}
+
+/* Default theme styles of the modal dialog */
+
+.remodal {
+    width: 100%;
+    margin-bottom: 20px;
+    transform: translate3d(0, 0, 0);
+}
+
+.remodal.remodal-is-opening,
+.remodal.remodal-is-closing {
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+}
+
+.remodal.remodal-is-opening {
+    -webkit-animation-name: remodal-opening-keyframes;
+    animation-name: remodal-opening-keyframes;
+}
+
+.remodal.remodal-is-closing {
+    -webkit-animation-name: remodal-closing-keyframes;
+    animation-name: remodal-closing-keyframes;
+}
+
+/* Vertical align of the modal dialog */
+
+.remodal,
+.remodal-wrapper:after {
+    vertical-align: middle;
+}
+
+/* Remove inner padding and border in Firefox 4+ for the button tag. */
+
+.remodal-confirm::-moz-focus-inner,
+.remodal-cancel::-moz-focus-inner,
+.remodal-close::-moz-focus-inner {
+    padding: 0;
+
+    border: 0;
+}
+
+/* Keyframes
+   ========================================================================== */
+@keyframes remodal-opening-keyframes {
+    from {
+        -webkit-transform: scale(1.05);
+        transform: scale(1.05);
+
+        opacity: 0;
+    }
+    to {
+        -webkit-transform: none;
+        transform: none;
+
+        opacity: 1;
+
+        -webkit-filter: blur(0);
+        filter: blur(0);
+    }
+}
+
+@keyframes remodal-closing-keyframes {
+    from {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+
+        opacity: 1;
+    }
+    to {
+        -webkit-transform: scale(0.95);
+        transform: scale(0.95);
+
+        opacity: 0;
+
+        -webkit-filter: blur(0);
+        filter: blur(0);
+    }
+}
+
+@keyframes remodal-overlay-opening-keyframes {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes remodal-overlay-closing-keyframes {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}

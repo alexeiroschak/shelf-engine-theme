@@ -1,0 +1,153 @@
+.features {
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 50px;
+  background-color: $brand-light;
+
+  @include respond-to(sm) {
+    padding-top: 110px;
+    padding-bottom: 100px;
+  }
+
+  &__text-wrap {
+    margin-bottom: 50px;
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    @include respond-to(sm) {
+      margin-bottom: 60px;
+      max-width: 550px;
+    }
+  }
+
+  &__list {
+    @include respond-to(sm) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 55px;
+    }
+
+    img {
+      margin-bottom: 25px;
+    }
+
+    h3 {
+      margin-bottom: 15px;
+      color: $heading-color-2;
+      font-size: 1.8rem;
+      font-weight: 600;
+      line-height: 1.1;
+    }
+
+    @include respond-to(sm) {
+      width: calc(33.33% - 20px);
+      font-size: 1.5rem;
+
+      &:not(:last-child) {
+        margin-bottom: 0;
+      }
+
+      &:nth-child(2) {
+        transition-delay: 0.4s;
+      }
+
+      &:nth-child(3) {
+        transition-delay: 0.7s;
+      }
+    }
+
+    @include respond-to(md) {
+      width: 30%;
+    }
+  }
+
+  &__dotted-1 {
+    display: none;
+
+    @include respond-to(lg) {
+      position: absolute;
+      top: 45px;
+      left: -100px;
+      display: block;
+      width: 360px;
+      height: 360px;
+
+      svg circle {
+        stroke-width: 0.3;
+        stroke-dasharray: 0.15, 3.1;
+      }
+    }
+  }
+
+  &__dotted-2 {
+    position: absolute;
+    top:85px;
+    
+    left: 100px;
+    display: block;
+    width: 400px;
+    height: 400px;
+
+
+
+    svg circle {
+      stroke-width: 0.25;
+      stroke-dasharray: 0.15, 2;
+    }
+
+    @media (min-width: 668px){
+      top: 8px;
+      left: auto;
+      right: -172px;
+      width: 500px;
+      height: 500px;
+    }
+
+ 
+
+    @include respond-to(lg) {
+      top: 110px;
+      left: auto;
+      right: -172px;
+    }
+  }
+
+  &__dotted-3 {
+    position: absolute;
+   
+    left: 232px;
+    width: 135px;
+    height: 135px;
+    top: 215px;
+
+    svg circle {
+      stroke-width: 0.52;
+      stroke-dasharray: 0.25, 3.8;
+    }
+
+    @media (min-width: 668px){
+      top: 145px;
+      left: auto;
+      right: -40px;
+      width: 235px;
+      height: 235px;
+    }
+
+
+
+    @include respond-to(lg) {
+      top: 245px;
+      left: auto;
+      right: -40px;
+    }
+
+    
+  }
+}

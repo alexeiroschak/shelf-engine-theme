@@ -1,0 +1,100 @@
+aside#moove_gdpr_cookie_info_bar.moove-gdpr-light-scheme {
+	border-top: none;
+	background-color: $brand-light;
+	border-top: 1px solid #C0CFD0;
+
+	.moove-gdpr-info-bar-container {
+		max-width: $max-width;
+		padding: 20px;
+
+		.moove-gdpr-info-bar-content {
+			padding: 0;
+			position: relative;
+
+			&:before {
+				content: '';
+				background-image: url(../img/cookie.png);
+				display: block;
+				position: absolute;
+				top: 0;
+				left: -99px;
+				height: 60px;
+				width: 59px;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: contain;
+
+				@media (max-width: 1350px) {
+					display: none;
+				}
+			}
+
+			a,
+			p {
+				font-weight: normal;
+				font-size: 13px;
+				line-height: 16px;
+				color: $heading-color;
+				font-family: $text-font-stack;
+			}
+			a {
+				transition: all 0.25s ease;
+
+				&:hover {
+					text-decoration: none;
+				}
+			}
+
+			.mgbutton {
+				&.moove-gdpr-infobar-allow-all {
+					border: 2px solid $heading-color;
+					border-radius: 6px;
+					text-align: center;
+					background-color: transparent;
+					color: $heading-color;
+					padding: 12px 28px;
+					font-size: 16px;
+					line-height: 1;
+					font-weight: 600;
+					transition: all 0.25s ease;
+
+					&:hover {
+						background-color: $heading-color;
+						color: $c-white;
+					}
+				}
+
+				&.moove-gdpr-infobar-reject-btn {
+					font-size: 16px;
+					line-height: 1;
+					font-weight: 400;
+					color: $heading-color;
+					background-color: transparent;
+					padding: 0;
+					margin-left: 20px;
+					@include underline;
+				}
+			}
+
+		}
+
+		.moove-gdpr-button-holder {
+			padding-left: 80px;
+		}
+	}
+
+	@media(max-width: 767px) {
+		.moove-gdpr-info-bar-container {
+			.moove-gdpr-button-holder {
+				padding-left: 0;
+				padding-top: 20px;
+			}
+		}
+	}
+}
+
+
+
+
+
+

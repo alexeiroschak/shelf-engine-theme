@@ -1,0 +1,52 @@
+.v3-vendors {
+    background-color: #fff;
+    h2 {
+        margin-bottom: 30px;
+    }
+    &__inner {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+
+        @include respond-to(md) {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__text-wrap {
+        @include respond-to(md) {
+            width: 50%;
+            padding-right: 60px;
+        }
+        p:last-child {
+            padding-top: 30px;
+        }
+    }
+
+    &__logo-wrap {
+        display: flex;
+        flex-wrap: wrap;
+
+        @include respond-to(md) {
+            width: 50%;
+        }
+    }
+
+    &__logo-logo {
+        width: 33.33%;
+        height: 122px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transform: translateY(20px);
+
+        img {
+            padding: 5px 10px;
+
+            @include respond-to(md) {
+                padding: 10px 10px;
+            }
+        }
+    }
+}

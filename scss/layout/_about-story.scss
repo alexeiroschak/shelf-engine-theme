@@ -1,0 +1,125 @@
+.about-story{
+  overflow: hidden;
+
+  &__inner{
+    padding-top: 109px;
+    position: relative;
+    padding-bottom: 80%;
+
+    @include respond-to(sm){
+    padding-bottom: 230px;
+    }
+
+    @include respond-to(sm){
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__copy-wrap{
+    padding-bottom: 28px;
+
+    @include respond-to(sm){
+      width: 46%;
+    }
+
+    h4{
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    h1{
+      padding-bottom: 40px;;
+    }
+
+    p{
+      padding-bottom: 32px;
+      font-size: 18px;
+    }
+  }
+
+  &__timeline-wrap{
+    @include respond-to(sm){
+      width: 34%;
+    }
+  }
+
+  &__timeline-item{
+    position: relative;
+    padding-bottom: 26px;
+
+    h3, p{
+      padding-left: 42px;
+      opacity: 0;
+    }
+
+    h3{
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    a{
+      color: #01161e;
+    }
+
+    a:hover{
+      border-bottom: solid #01161e;
+      border-width: 1px;
+    }
+  }
+
+  &__timeline-icon{
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #153343;
+    transform: scale(0);;
+  }
+
+  &__timeline-icon-last{
+    transform: scale(1.5);
+    animation: pulseIcon 1.2s infinite;
+    opacity: 0;
+  }
+
+
+  &__timeline-dotted-line{
+    margin: auto;
+    height: 0px;
+  }
+
+  &__image-wrap{
+    position: absolute;
+    bottom: -110px;
+    left: 20px;
+    width: calc(100% - 40px);
+
+    @include respond-to(sm){
+      width: 500px;
+    }
+
+    img{
+      position: absolute;
+      top: 31px;
+      
+    }
+  }
+
+  &__white-circle{
+    margin-top: 89px;
+    width: 98%;
+    padding-top: 98%;
+    background-color: white;
+    border-radius: 50%;
+    transform: scale(0.5);
+  }
+}
+
+@keyframes pulseIcon {
+  0% { transform: scale(1)}
+  50% { transform: scale(1.2)}
+  100% { transform: scale(1)}
+}

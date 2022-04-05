@@ -1,0 +1,207 @@
+.video-block {
+    position: relative;
+    padding-top: 60px;
+    padding-bottom: 80px;
+    background-color: $brand-mid;
+
+    @include respond-to(sm) {
+        padding-top: 110px;
+        padding-bottom: 115px;
+    }
+
+    &__inner {
+        @include respond-to(sm) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        @include respond-to(md) {
+            align-items: flex-start;
+        }
+    }
+
+    &__text-wrap {
+        position: relative;
+        margin-bottom: 45px;
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        a {
+            color: $heading-color;
+            text-decoration: underline;
+            &:hover {
+                color: #000204;
+            }
+        }
+
+        @include respond-to(sm) {
+            margin-bottom: 90px;
+            width: 41.66%;
+        }
+    }
+
+    &__video-wrap {
+        position: relative;
+        z-index: 2;
+        margin-bottom: 70px;
+        margin-left: -20px;
+        width: calc(100% + 40px);
+
+        @include respond-to(sm) {
+            margin-bottom: 90px;
+            width: 50%;
+        }
+    }
+
+    &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: block;
+        width: 100%;
+        z-index: 2;
+        @include transition;
+
+        @include when-inside('.embed-container.is-playing') {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        &::after {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 60px;
+            height: 60px;
+            background: url('../img/icon-play.svg') no-repeat center center;
+            background-size: 100% 100%;
+            transform: translate(-50%, -50%);
+            content: '';
+        }
+
+        img {
+            @include objectFit;
+        }
+    }
+
+    &__btn {
+        padding-left: 50px;
+        display: flex;
+        align-items: center;
+        height: 31px;
+        font-size: 1.8rem;
+        font-weight: 400;
+        line-height: 1.1;
+        background-size: 31px 31px;
+        background-repeat: no-repeat;
+        background-position: left center;
+        background-color: transparent;
+        cursor: pointer;
+
+        &.is-active {
+            font-weight: 700;
+            background-image: url('../img/icon-play.svg');
+        }
+    }
+
+    &__dotted-1 {
+        position: absolute;
+        top: 15px;
+        left: -120px;
+        width: 360px;
+        height: 360px;
+
+        svg circle {
+            stroke-width: 0.33;
+            stroke-dasharray: 0.15, 3;
+        }
+
+        @include respond-to(sm) {
+            top: auto;
+            left: -260px;
+            bottom: 50px;
+        }
+    }
+
+    &__dotted-2 {
+        position: absolute;
+        right: -45px;
+        bottom: 35px;
+        width: 230px;
+        height: 230px;
+
+        svg circle {
+            stroke-width: 0.5;
+            stroke-dasharray: 0.25, 3.8;
+        }
+
+        @include respond-to(sm) {
+            top: 110px;
+            right: -80px;
+            bottom: auto;
+        }
+    }
+
+    &__double {
+        display: none;
+
+        @include respond-to(sm) {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: block;
+            width: 360px;
+            height: 360px;
+        }
+
+        @include respond-to(lg) {
+            width: 670px;
+            height: 670px;
+        }
+    }
+
+    &__double-1 {
+        width: 100%;
+        height: 100%;
+
+        svg circle {
+            stroke-width: 0.3;
+            stroke-dasharray: 0.15, 3;
+        }
+
+        @include respond-to(lg) {
+            svg circle {
+                stroke-width: 0.2;
+                stroke-dasharray: 0.1, 2;
+            }
+        }
+    }
+
+    &__double-2 {
+        position: absolute;
+        top: 25%;
+        left: 25%;
+        width: 50%;
+        height: 50%;
+
+        svg circle {
+            stroke-width: 0.6;
+            stroke-dasharray: 0.25, 5;
+        }
+
+        @include respond-to(lg) {
+            svg circle {
+                stroke-width: 0.4;
+                stroke-dasharray: 0.2, 3.8;
+            }
+        }
+    }
+}

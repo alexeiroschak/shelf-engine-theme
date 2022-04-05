@@ -1,0 +1,42 @@
+/**
+ * Basic typography style for copy text
+ */
+
+html {
+  // This defines what 1 rem is
+  font-size: 62.5%;
+}
+
+body {
+  color: $text-color;
+  font: normal 1.6rem / 1.47 $text-font-stack;
+
+  @include respond-to(sm) {
+    font-size: 1.8rem;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: $heading-color;
+  font-weight: 400;
+}
+
+.heading-lg {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.24;
+
+  @include respond-to(sm) {
+    font-size: 4rem;
+    line-height: 1.1;
+  }
+}
+
+h1,
+h2 {
+  @extend .heading-lg;
+}

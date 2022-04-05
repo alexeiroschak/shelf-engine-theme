@@ -1,0 +1,39 @@
+.v3-forecasting{
+  position: relative;
+
+  &__inner{
+    padding-top: 84px;
+    padding-bottom: 98px;
+
+    @include respond-to(md){
+      display: flex;      
+    }
+
+    @include respond-to(md){
+      padding-top: 122px;    
+    }
+  }
+
+  &__text-wrap{
+    padding-bottom: 6rem;;
+
+    @include respond-to(md){
+      width: 50%;
+      padding-right: 60px;
+
+      p:not(:first-child) {
+        padding-left: 60px;
+      }
+    }
+    p:last-child{
+      padding-top: 28px;
+    }
+  }
+
+  &__graph-wrap{
+    text-align: center;
+    img{
+      margin: auto;
+    }
+  }
+}
